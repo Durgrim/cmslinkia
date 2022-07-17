@@ -1,0 +1,45 @@
+<h1 class="my-4">Login</h1>
+
+    {{#each errorMessage}}
+        <div class="alert alert-danger">
+            {{error}}
+        </div>
+    {{/each}}
+    {{#if successMessage}}
+        <div class="alert alert-success">
+            {{successMessage}}
+        </div>
+    {{/if}}
+    {{#if error}}
+        <div class="alert alert-danger">
+            {{error}}
+        </div>
+    {{/if}}
+<div class="card card-login mx-auto mt-5">
+    <div class="card-header">Login</div>
+    <div class="card-body">
+
+        <form action="/login" method="post">
+            <div class="container">
+                <div class="col">
+                    <label for="email">Email address</label>
+                    <input required name="email" class="form-control" id="email" type="email" placeholder="Introduce tu email">
+                </div>
+            </div><br>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <label for="password">Contraseña</label>
+                        <input required name="password" class="form-control" id="password" type="password" placeholder="Introduce contraseña">
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        <div class="text-center">
+            <a class="d-block small" href="">¿Has olvidado tu contraseña?</a>
+        </div>
+    </div>
+</div>

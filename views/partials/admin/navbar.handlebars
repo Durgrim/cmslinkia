@@ -1,0 +1,9 @@
+ <nav class="col-sm navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-1">
+    <a class="text-center navbar-brand col-sm-3 col-md-2 mx-auto" href="/admin"><img src="/imgs/Logo.png" alt="CMSLinkia" height="40px"></a>
+    <input class="form-control form-control-dark w-80" type="text" placeholder="Buscar" aria-label="Buscar">
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            <a class="nav-link" href="#" onclick="window.location='/admin/logout'">Usuario conectado: {{session.passport.user.email}} | Logout</a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,35 @@
+<div class="col py-2">
+    {{#if successMessage}}
+        <div class="alert alert-success">
+            {{successMessage}}
+        </div>
+    {{/if}}
+    {{#if errorMessage}}
+        <div class="alert alert-danger">
+            {{errorMessage}}
+        </div>
+    {{/if}}
+    <h1><u>Mostrar Usuarios</u></h1><br>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">e-mail</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Editar</th> {{!-- Implementar para administradores --}}
+                <th scope="col">Eliminar</th> {{!--Implementar para administradores --}}
+            </tr>
+        </thead>
+        <tbody>
+            {{#each users}}
+                <tr>
+                    <td>{{email}}</td>
+                    <td>{{firstName}}</td>
+                    <td>{{lastName}}</td>     
+                    <td><a href="/admin/editUser/{{_id}}" class="btn btn-dark">Edit</td>
+                    <td><a href="/admin/deleteUser/{{_id}}" class="btn btn-danger">Eliminar</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

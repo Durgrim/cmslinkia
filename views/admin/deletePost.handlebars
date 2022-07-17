@@ -1,0 +1,25 @@
+<div class="col py-2">
+    <h1><u>Eliminar Post</u></h1>
+    <p>ID = {{singlePost._id}}</p>
+    <br>
+    <h5><u>Titulo:</u></h5>
+    <p>{{singlePost.title}}</p>
+
+    <h5><u>Contenido:</u></h5>
+    <p>{{singlePost.content}}</p>
+
+    <strong>¿Estás seguro de querer eliminar este contenido?</strong>
+
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">
+            <form action="/admin/deletePosts/{{singlePost._id}}" method="post">
+                <button class="btn btn-danger" type="submit">Confirmar</button>
+            </form>
+        </li>    
+        <li class="list-group-item">
+            <form action="/admin/showPosts/" method="get">
+                <button class="btn btn-dark" type="submit">Volver atrás</button>
+            </form>
+        </li>
+    </ul>
+</div>

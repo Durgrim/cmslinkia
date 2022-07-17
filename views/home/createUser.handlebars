@@ -1,0 +1,55 @@
+<h1 class="my-4">Registro de usuarios</h1>
+
+    {{#each errors}}
+        <div class="alert alert-danger">
+            {{message}}
+        </div>
+    {{/each}}
+    {{#if successMessage}}
+        <div class="alert alert-success">
+            {{successMessage}}
+        </div>
+    {{/if}}
+
+<div class="card card-register mx-auto mt-5">
+    <div class="card-header">Registrar un usuario</div>
+    <div class="card-body">
+        <form action="/createUser" method="post">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <label for="firstName">Nombre</label>
+                        <input required name="firstName" class="form-control" id="firstName" type="text" placeholder="Introduce tu nombre">
+                    </div>
+                    <div class="col">
+                        <label for="lastName">Apellidos</label>
+                        <input required name="lastName" class="form-control" id="lastName" type="text" placeholder="Introduce tu apellido">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="col">
+                    <label for="email">E-mail</label>
+                    <input required name="email" class="form-control" id="email" type="email" placeholder="Introduce tu email">
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <label for="password">Contraseña</label>
+                        <input required name="password" class="form-control" id="password" type="password" placeholder="Introduce contraseña">
+                    </div>
+                    <div class="col">
+                        <label for="confirmPassword">Confirma contraseña</label>
+                        <input required name="confirmPassword" class="form-control" id="confirmPassword" type="password" placeholder="Repite la contraseña">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary btn-block">Crear usuario</button>
+        </form>
+
+    </div>
+</div>

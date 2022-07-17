@@ -1,0 +1,39 @@
+<div class="col py-2">
+    <h1><u>Crear Usuario</u></h1><br>
+    {{#each errors}}
+    <div class="alert alert-danger">
+        {{message}}
+    </div>
+    {{/each}}
+    
+    <form action="/admin/createUser" method="post">
+        <div class="form-group">
+            <label for="firstName">Nombre</label>
+            <input name="firstName" class="form-control" id="firstName" type="text" placeholder="Introduce el titulo aquí" required>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Apellidos</label>
+            <input name="lastName" class="form-control" id="lastName" type="text" placeholder="Introduce el titulo aquí" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">e-mail</label>
+            <input name="email" class="form-control" id="email" type="text" placeholder="Introduce el titulo aquí" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input name="password" class="form-control" id="password" type="password" placeholder="Introduce el titulo aquí" required>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPassword">Confirmar contraseña</label>
+            <input name="confirmPassword" class="form-control" id="confirmPassword" type="password" placeholder="Introduce el titulo aquí" required>
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-primary btn-block">Crear Usuario</button>
+
+    </form>
+</div>

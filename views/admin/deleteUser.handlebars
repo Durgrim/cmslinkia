@@ -1,0 +1,28 @@
+<div class="col py-2">
+    <h1><u>Eliminar Usuario</u></h1>
+    <p>ID = {{singleUser._id}}</p>
+    <br>
+    <h5><u>Nombre:</u></h5>
+    <p>{{singleUser.firstName}}</p>
+
+    <h5><u>Apellidos:</u></h5>
+    <p>{{singleUser.lastName}}</p>
+
+    <h5><u>e-mail:</u></h5>
+    <p>{{singleUser.email}}</p>
+
+    <strong>¿Estás seguro de querer eliminar este usuario?</strong>
+
+    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">
+            <form action="/admin/deleteUser/{{singleUser._id}}" method="post">
+                <button class="btn btn-danger" type="submit">Confirmar</button>
+            </form>
+        </li>    
+        <li class="list-group-item">
+            <form action="/admin/showUsers/" method="get">
+                <button class="btn btn-dark" type="submit">Volver atrás</button>
+            </form>
+        </li>
+    </ul>
+</div>
