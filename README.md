@@ -37,7 +37,7 @@ _Agrega notas adicionales sobre como hacer deploy_
 
 * [Node](https://nodejs.org) - Node.js es un entorno en tiempo de ejecución multiplataforma
 * [express](https://expressjs.com/) - server framework para Node.js
-* [nodemon](https://www.npmjs.com/package/nodemon) - 
+* [nodemon](https://www.npmjs.com/package/nodemon) - Reinicio aplicacion 
 * [express-handlebars](https://github.com/express-handlebars/express-handlebars) - Motor de plantillas
 * [express-session](https://www.npmjs.com/package/express-session) - Sesiones
 * [connect-flash](https://www.npmjs.com/package/connect-flash) - Mensajes flash
